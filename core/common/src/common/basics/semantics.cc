@@ -135,9 +135,9 @@ GridMapND<T, N_DIM>::GridMapND(
     const std::array<int, N_DIM> &dims_size,
     const std::array<decimal_t, N_DIM> &dims_resolution,
     const std::array<std::string, N_DIM> &dims_name) {
-  dims_size_ = dims_size;
-  dims_resolution_ = dims_resolution;
-  dims_name_ = dims_name;
+  dims_size_ = dims_size; // {1000,100,81}
+  dims_resolution_ = dims_resolution; // {0.25, 0.2, 0.1}, sdt
+  dims_name_ = dims_name; // {"s","d","t"}
 
   SetNDimSteps(dims_size_);
   SetDataSize(dims_size_);
